@@ -36,7 +36,6 @@ func handlePythonExecution(
 	ctx context.Context,
 	request mcp.CallToolRequest,
 ) (*mcp.CallToolResult, error) {
-
 	code, ok := request.Params.Arguments.(map[string]any)["code"].(string)
 	if !ok {
 		return mcp.NewToolResultError("Missing or invalid code argument"), nil
